@@ -1,0 +1,46 @@
+image: node:alpine
+stages:
+  - install
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules
+
+job_install:
+  stage: install
+  tags:
+    - proj
+  before_script:
+    - npm config set registry https://registry.npmmirror.com/
+  script:
+    - npm install
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'master-xxx'
+      when: always
+
+job_build:
+  stage: build
+  tags:
+    - proj
+  artifacts:
+    paths:
+      - dist
+    expire_in: 30 days
+  script:
+    - npm run build
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'master-xxx'
+      when: always
+
+job_deploy:
+  stage: deploy
+  image: docker
+  tags:
+    - proj
+  script:
+    - docker cp dist/. nginx:/usr/share/nginx/html/$CI_PROJECT_NAME
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'master-xxx'
+      when: always
