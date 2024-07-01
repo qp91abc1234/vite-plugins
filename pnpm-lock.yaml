@@ -11,24 +11,12 @@ importers:
       '@antfu/eslint-config':
         specifier: ^2.20.0
         version: 2.20.0(@vue/compiler-sfc@3.4.23)(eslint-plugin-format@0.1.1)(eslint@9.4.0)(typescript@5.4.5)
-      '@types/node':
-        specifier: ^20.12.7
-        version: 20.12.7
       eslint:
         specifier: 9.4.0
         version: 9.4.0
       eslint-plugin-format:
         specifier: ^0.1.1
         version: 0.1.1(eslint@9.4.0)
-      typescript:
-        specifier: ^5.2.2
-        version: 5.4.5
-      vite:
-        specifier: ^5.2.0
-        version: 5.2.10(@types/node@20.12.7)
-      vue-tsc:
-        specifier: ^2.0.6
-        version: 2.0.13(typescript@5.4.5)
 
   playground/uniapp:
     dependencies:
@@ -2101,12 +2089,6 @@ packages:
     resolution: {integrity: sha512-LnwD+mUEfxWMa1QpDraczIn6k0Ee3SMicuYSSzS6ZYl2gKS09EClnJYGd8Du6rfc5r/GZEk5o1mRb8TaTj03sQ==}
     dependencies:
       '@types/unist': 2.0.10
-    dev: true
-
-  /@types/node@20.12.7:
-    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
-    dependencies:
-      undici-types: 5.26.5
     dev: true
 
   /@types/node@20.14.9:
@@ -6167,42 +6149,6 @@ packages:
       terser: 5.31.1
     optionalDependencies:
       fsevents: 2.3.3
-
-  /vite@5.2.10(@types/node@20.12.7):
-    resolution: {integrity: sha512-PAzgUZbP7msvQvqdSD+ErD5qGnSFiGOoWmV5yAKUEI0kdhjbH6nMWVyZQC/hSc4aXwc0oJ9aEdIiF9Oje0JFCw==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^18.0.0 || >=20.0.0
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      '@types/node': 20.12.7
-      esbuild: 0.20.2
-      postcss: 8.4.38
-      rollup: 4.16.0
-    optionalDependencies:
-      fsevents: 2.3.3
-    dev: true
 
   /vite@5.2.10(@types/node@20.14.9)(sass@1.75.0):
     resolution: {integrity: sha512-PAzgUZbP7msvQvqdSD+ErD5qGnSFiGOoWmV5yAKUEI0kdhjbH6nMWVyZQC/hSc4aXwc0oJ9aEdIiF9Oje0JFCw==}
