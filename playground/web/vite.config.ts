@@ -6,6 +6,7 @@ import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import OSS from 'ali-oss'
 import ViteImgUpload from 'vite-img-upload'
+import aliInfo from '../../env.json'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -20,13 +21,7 @@ export default defineConfig({
     }),
     ViteImgUpload({
       upload: async (uploadItems) => {
-        const client = new OSS({
-          region: 'oss-cn-hangzhou',
-          bucket: 'md-pic-lib',
-          accessKeyId: '',
-          accessKeySecret: '',
-        })
-
+        const client = new OSS(aliInfo)
         const promises = uploadItems.map(({ md5Name, source }) => {
           return client.put(`tst/${md5Name}`, source)
         })

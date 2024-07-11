@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import ViteImgUpload from 'vite-img-upload'
 import OSS from 'ali-oss'
+import aliInfo from '../../env.json'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,13 +12,7 @@ export default defineConfig({
     uni(),
     ViteImgUpload({
       upload: async (uploadItems) => {
-        const client: any = new OSS({
-          region: 'oss-cn-hangzhou',
-          bucket: 'md-pic-lib',
-          accessKeyId: '',
-          accessKeySecret: '',
-        })
-
+        const client: any = new OSS(aliInfo)
         const promises = uploadItems.map(({ md5Name, source }) => {
           return client.put(`tst/${md5Name}`, source)
         })
