@@ -1,6 +1,7 @@
 // vite.config.js
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   publicDir: false,
@@ -15,4 +16,7 @@ export default defineConfig({
       external: ['node:fs', 'node:path', 'node:url', 'sharp'],
     },
   },
+  plugins: [
+    dts()
+  ]
 })

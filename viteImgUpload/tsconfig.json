@@ -12,7 +12,7 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "paths": {
-      "@/*": ["viteImgUpload/src/*"]
+      "@/*": ["./src/*"]
     },
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
@@ -27,5 +27,5 @@
     "skipLibCheck": true
   },
   "references": [{ "path": "./tsconfig.node.json" }],
-  "include": ["viteImgUpload/src/**/*.ts", "viteImgUpload/src/**/*.tsx", "viteImgUpload/src/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
