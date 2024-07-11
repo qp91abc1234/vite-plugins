@@ -25,5 +25,3 @@ dist-ssr
 # Element plus
 auto-imports.d.ts
 components.d.ts
-
-env.json
