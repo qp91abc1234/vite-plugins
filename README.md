@@ -115,7 +115,6 @@ export default function ViteImgUpload(opts: IOptions) {
     // 遍历剩余的代码文件和 css，采用正则匹配的方式对文件内图片的路径进行替换
     const chunkKeys = Object.keys(bundle)
     chunkKeys.forEach((key) => {
-      if(bundle[key].type === 'asset') return
       const item = bundle[key]
       if (item.source) {
         item.source = item.source.replace(imageRegex, replaceFunc)
