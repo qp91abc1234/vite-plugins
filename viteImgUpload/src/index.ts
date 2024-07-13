@@ -183,7 +183,6 @@ export default function ViteImgUpload(opts: IOptions) {
 
     const chunkKeys = Object.keys(bundle)
     chunkKeys.forEach((key) => {
-      if(bundle[key].type === 'asset') return
       const item = bundle[key]
       if (item.source) {
         item.source = item.source.replace(imageRegex, replaceFunc)
