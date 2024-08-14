@@ -1,7 +1,7 @@
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import type { ResolvedConfig } from 'vite'
+import type { PluginOption, ResolvedConfig } from 'vite'
 import type { JpegOptions, PngOptions } from 'sharp'
 import sharp from 'sharp'
 import ansi from 'ansi-colors'
@@ -32,7 +32,7 @@ else {
   __dirname = __dirname
 }
 
-export default function ViteImgUpload(opts: IOptions) {
+export default function ViteImgUpload(opts: IOptions): PluginOption {
   let config: ResolvedConfig
   opts.log = opts.log ?? true
   opts.cache = opts.cache ?? true

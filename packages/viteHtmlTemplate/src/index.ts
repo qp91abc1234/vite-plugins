@@ -1,4 +1,4 @@
-import type { ResolvedConfig } from 'vite'
+import type { PluginOption, ResolvedConfig } from 'vite'
 import type { HtmlTagDescriptor } from 'vite'
 import type { Options as EJSOptions } from 'ejs'
 import { render } from 'ejs'
@@ -18,7 +18,7 @@ interface IOptions {
   inject?: IInjectData[]
 }
 
-export default function ViteHtmlTemplate(opts: IOptions) {
+export default function ViteHtmlTemplate(opts: IOptions): PluginOption {
   let minify = opts.minify
   const injectData = opts.inject ?? []
   let config: ResolvedConfig
