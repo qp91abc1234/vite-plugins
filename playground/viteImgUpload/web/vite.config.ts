@@ -6,7 +6,7 @@ import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import OSS from 'ali-oss'
 import ViteImgUpload from 'vite-img-upload'
-import aliInfo from '../../env.json'
+import aliInfo from '../../../env.json'
 
 // https://vitejs.dev/config/
 export default defineConfig({

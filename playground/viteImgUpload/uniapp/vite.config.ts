@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import ViteImgUpload from 'vite-img-upload'
 import OSS from 'ali-oss'
-import aliInfo from '../../env.json'
+import aliInfo from '../../../env.json'
 
 // https://vitejs.dev/config/
 export default defineConfig({
