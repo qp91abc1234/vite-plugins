@@ -147,4 +147,4 @@ export default function ViteImgUpload(opts: IOptions) {
 - 上传缓存
 - ...
 
-感兴趣的可移步[源码](https://github.com/qp91abc1234/vite-img-upload)
+感兴趣的可移步[源码](https://github.com/qp91abc1234/vite-plugins/tree/master/packages/viteImgUpload)

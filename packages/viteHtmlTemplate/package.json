@@ -1,7 +1,7 @@
 {
   "name": "vite-html-template",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Vite plugin to upload your image assets",
   "author": "zcc",
   "license": "ISC",
